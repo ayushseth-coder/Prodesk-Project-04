@@ -20,11 +20,7 @@ function App() {
 
   const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 
-<<<<<<< HEAD
   const handleGenerate = async (useAI = false) => {
-=======
-  const handleGenerate = async () => {
->>>>>>> 7d8c20332c6001c7e702444e515a0fbc2071af1e
     setError("");
     setCopied(false);
 
@@ -37,11 +33,7 @@ function App() {
     setOutput("");
 
     try {
-<<<<<<< HEAD
       if (!useAI) {
-=======
-      if (!apiKey) {
->>>>>>> 7d8c20332c6001c7e702444e515a0fbc2071af1e
         setTemplateMode(true);
         const template = generateTemplate({
           candidateName,
@@ -52,12 +44,9 @@ function App() {
         });
         setOutput(template);
       } else {
-<<<<<<< HEAD
         if (!apiKey) {
           throw new Error("Missing Gemini API key. Please add it to your .env file.");
         }
-=======
->>>>>>> 7d8c20332c6001c7e702444e515a0fbc2071af1e
         setTemplateMode(false);
         const generated = await generateCoverLetter({
           candidateName,
@@ -71,21 +60,6 @@ function App() {
     } catch (err) {
       const message = err instanceof Error ? err.message : "An unexpected error occurred.";
       setError(message);
-<<<<<<< HEAD
-=======
-      if (!apiKey) {
-        setTemplateMode(true);
-        setOutput(
-          generateTemplate({
-            candidateName,
-            jobRole,
-            company,
-            skills,
-            resumeText,
-          })
-        );
-      }
->>>>>>> 7d8c20332c6001c7e702444e515a0fbc2071af1e
     } finally {
       setLoading(false);
     }
@@ -155,7 +129,6 @@ function App() {
                     Resume text loaded and ready for personalization.
                   </div>
                 )}
-<<<<<<< HEAD
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <button
                     type="button"
@@ -174,16 +147,6 @@ function App() {
                     {loading ? "Generating..." : "Generate Template"}
                   </button>
                 </div>
-=======
-                <button
-                  type="button"
-                  onClick={handleGenerate}
-                  disabled={loading}
-                  className="inline-flex w-full items-center justify-center rounded-2xl bg-cyan-500 px-5 py-3 text-base font-semibold text-slate-950 transition hover:bg-cyan-400 disabled:cursor-not-allowed disabled:opacity-60"
-                >
-                  {loading ? "Generating cover letter..." : "Generate Cover Letter"}
-                </button>
->>>>>>> 7d8c20332c6001c7e702444e515a0fbc2071af1e
                 {error && (
                   <p className="rounded-2xl border border-rose-400/30 bg-rose-500/10 px-4 py-3 text-sm text-rose-100">
                     {error}

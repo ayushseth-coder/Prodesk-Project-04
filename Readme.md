@@ -4,7 +4,6 @@
 ---
 
 ## Live Demo
-<<<<<<< HEAD
 https://prodesk-project-04.vercel.app
 
 ## Screenshot
@@ -12,16 +11,6 @@ https://prodesk-project-04.vercel.app
 
 ## Github link 
 https://github.com/ayushseth-coder/Prodesk-Project-04.git
-=======
-https://prodesk-sprint04-ayush.vercel.app
-
-## Screenshot
-
-
-![Site Preview](./screenshot.png)
-
-
->>>>>>> 7d8c20332c6001c7e702444e515a0fbc2071af1e
 
 ---
 
